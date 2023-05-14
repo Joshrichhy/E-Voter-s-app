@@ -3,6 +3,7 @@ package dtos;
 public class RegisterVoterRequest {
     private String firstName;
     private String lastName;
+    private String userName;
     private int age;
     private long votersId;
 
@@ -38,13 +39,22 @@ public class RegisterVoterRequest {
         this.votersId = votersId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
-        return "Voter{" +
-                "firstName='" + firstName +"\n"+ '\'' +
-                ", lastName='" + lastName +"\n" + '\'' +
-                ", age=" + age +"\n"+
-                ", votersId=" + votersId +"\n"+
+        return "RegisterVoterRequest{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", age=" + age +
+                ", votersId=" + votersId +
                 '}';
     }
 }

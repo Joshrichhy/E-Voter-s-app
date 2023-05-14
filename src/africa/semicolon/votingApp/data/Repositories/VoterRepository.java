@@ -13,4 +13,5 @@ public interface VoterRepository {
     void delete(int id);
     void deleteAll();
 
+    Voter findByUserName(String userName);
 }

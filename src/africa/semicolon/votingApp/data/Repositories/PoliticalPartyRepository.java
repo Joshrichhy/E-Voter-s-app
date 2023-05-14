@@ -11,8 +11,6 @@ public interface PoliticalPartyRepository {
 
     PoliticalParty findbyPartyName(String partyName);
 
-    Long voteParty(String poliiticalParty);
-
     void deletePoliticalParty(String poliiticalParty);
     void deleteAllPoliticalParties();
 

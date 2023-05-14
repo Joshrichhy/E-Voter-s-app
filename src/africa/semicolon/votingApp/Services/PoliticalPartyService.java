@@ -1,13 +1,13 @@
 package Services;
 
 import data.models.PoliticalParty;
-import dtos.FindUserResponse;
+import dtos.FindPoliticalPartyResponse;
 import dtos.RegisterRequests;
 
 public interface PoliticalPartyService {
 
     PoliticalParty registerPoliticalParty(RegisterRequests registerRequests);
-    FindUserResponse findPoliticalParty(String partyName);
+    FindPoliticalPartyResponse findPoliticalParty(String partyName);
 
     Long votePoliticalParty(String partyName);
 

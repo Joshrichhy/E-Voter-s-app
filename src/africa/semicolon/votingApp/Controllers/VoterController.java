@@ -15,16 +15,12 @@ public class VoterController {
     }
 
     public Object findVoterById(int id) {
-        try {
-            return voterServices.findVoter(id);
-        } catch (NullPointerException ex) {
-            return  ex.getMessage();}
+        try {return voterServices.findVoter(id);}
+        catch (NullPointerException ex) {return  ex.getMessage();}
     }
     public String votePoliticalParty(String partyName, int id){
-        try{
-      return  voterServices.votePoliticalParty(partyName, id);}
-        catch(IllegalArgumentException | NullPointerException ex){
-          return  ex.getMessage();
+        try{return  voterServices.votePoliticalParty(partyName, id);}
+        catch(IllegalArgumentException |  NullPointerException ex){return  ex.getMessage();
         }
     }
 }

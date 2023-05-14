@@ -2,11 +2,11 @@ package utils;
 
 import data.models.PoliticalParty;
 import data.models.Voter;
-import dtos.FindUserResponse;
+import dtos.FindPoliticalPartyResponse;
+import dtos.FindVoterResponse;
 import dtos.RegisterRequests;
 import dtos.RegisterVoterRequest;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Mapper {
@@ -18,7 +18,7 @@ public class Mapper {
         return party;
     }
 
-    public static void map( PoliticalParty party, FindUserResponse userResponse){
+    public static void map( PoliticalParty party, FindPoliticalPartyResponse userResponse){
         userResponse.setPartyName(party.getPartyName());
         userResponse.setPartyCandidate(party.getPartyCandidate());
         userResponse.setPartyLogo(party.getPartyLogo());
@@ -31,8 +31,16 @@ public class Mapper {
         Voter voter = new Voter();
         voter.setFirstName(registerRequest.getFirstName());
         voter.setLastName(registerRequest.getLastName());
+        voter.setUserName(registerRequest.getUserName());
         voter.setAge(registerRequest.getAge());
         voter.setVotersId(registerRequest.getVotersId());
         return voter;
+    }
+
+    public static void map(Voter voter, FindVoterResponse response) {
+    response.setFullName(voter.getFirstName() + " "+ voter.getLastName());
+   response.setUserName(voter.getUserName());
+    response.setAge(voter.getAge());
+    response.setVotersId(voter.getVotersId());
     }
 }

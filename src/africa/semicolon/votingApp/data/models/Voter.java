@@ -3,6 +3,7 @@ package data.models;
 public class Voter {
     private String firstName;
     private String lastName;
+    private String userName;
     private int age;
     private long votersId;
 
@@ -38,13 +39,22 @@ public class Voter {
         this.votersId = votersId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
         return "Voter{" +
-                "firstName='" + firstName +"\n"+ '\'' +
-                ", lastName='" + lastName +"\n" + '\'' +
-                ", age=" + age +"\n"+
-                ", votersId=" + votersId +"\n"+
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", age=" + age +
+                ", votersId=" + votersId +
                 '}';
     }
 }

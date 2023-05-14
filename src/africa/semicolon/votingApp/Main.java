@@ -56,6 +56,7 @@ public class Main {
         RegisterVoterRequest request = new RegisterVoterRequest();
         request.setFirstName(input("Enter First Name"));
         request.setLastName(input("Enter Last Name"));
+        request.setUserName(input("Enter user Name"));
         request.setAge(Integer.parseInt(input("Enter Your Age")));
 
         var result = voterController.register(request);

@@ -10,7 +10,7 @@ public class PoliticalPartyController {
     public Object registerPoliticalParty(RegisterRequests registerRequests){
         try{
             return politicalPartyService.registerPoliticalParty(registerRequests);
-        }catch(NullPointerException ex){
+        }catch(NullPointerException | IllegalArgumentException ex){
             return ex.getMessage(); }
     }
 

@@ -1,8 +1,6 @@
 package dtos;
 
-import java.time.LocalDateTime;
-
-public class FindUserResponse {
+public class FindPoliticalPartyResponse {
 
         private String partyName;
         private String partyCandidate;
